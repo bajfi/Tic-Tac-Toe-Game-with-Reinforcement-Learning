@@ -1,15 +1,9 @@
 import os
-import sys
-
-# Add the project root directory to Python path
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(project_root)
 
 import numpy as np
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
-
-from backend.model import Player, State
+from model import Player, State
 
 app = Flask(__name__)
 CORS(
